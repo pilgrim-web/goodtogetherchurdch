@@ -3,10 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Good Together Church</title>
+    <title>Blog Post | Good Together Church</title>
     <link rel="stylesheet" href="/en/styles.css" />
   </head>
-  <body>
+  <body
+    data-page="blog-detail"
+    data-lang="en"
+    data-manifest="/content/blog/en/index.json"
+    data-base-path="/en/blog/"
+  >
     <header>
       <nav aria-label="Primary">
         <a href="/en/" aria-label="Good Together Church Home">Good Together Church</a>
@@ -52,86 +57,28 @@
     </header>
 
     <main>
-      <section aria-label="Hero">
-        <!-- CMS: Home slogan -->
-        <h1>2026, Let’s Pray Together</h1>
-        <div class="hero-slider" aria-live="polite">
-          <figure>
-            <img src="/assets/img/hero/home-01.jpg" alt="Worship gathering" decoding="async" />
-          </figure>
-          <figure>
-            <img src="/assets/img/hero/home-02.jpg" alt="Community prayer" loading="lazy" decoding="async" />
-          </figure>
-          <figure>
-            <img src="/assets/img/hero/home-03.jpg" alt="Sunday service" loading="lazy" decoding="async" />
-          </figure>
-          <figure>
-            <img src="/assets/img/hero/home-04.jpg" alt="Fellowship time" loading="lazy" decoding="async" />
-          </figure>
+      <section id="blog-post" class="news-post" aria-live="polite">
+        <div class="news-post__hero">
+          <div class="news-post__image">
+            <p class="news-loading" role="status">Loading blog…</p>
+          </div>
         </div>
       </section>
-
-      <section aria-labelledby="welcome-title" data-reveal>
-        <h2 id="welcome-title">Welcome / Who We Are</h2>
-        <!-- CMS: Home intro text -->
-        <p>
-          We are a Christ-centered church in the neighborhood, gathering weekly to worship,
-          grow in the Word, and serve with compassion.
-        </p>
-      </section>
-
-      <section aria-labelledby="vision-title" data-reveal>
-        <h2 id="vision-title">Vision</h2>
-        <!-- CMS: Home vision highlight -->
-        <p>One family in Christ, praying faithfully and serving our city with hope.</p>
-      </section>
-
-      <section aria-labelledby="preview-title" data-reveal>
-        <h2 id="preview-title">Explore</h2>
-        <div class="card-grid">
-          <article data-reveal>
-            <img src="/assets/img/cards/services.jpg" alt="Service times" loading="lazy" decoding="async" />
-            <!-- CMS: Home card label + summary -->
-            <h3>Services</h3>
-            <p>Worship times and prayer gatherings.</p>
-            <a href="/en/services/">View Services</a>
-          </article>
-          <article data-reveal>
-            <img src="/assets/img/cards/news.jpg" alt="Church news" loading="lazy" decoding="async" />
-            <!-- CMS: Home card label + summary -->
-            <h3>News</h3>
-            <p>Announcements and community updates.</p>
-            <a href="/en/news/">Read News</a>
-          </article>
-          <article data-reveal>
-            <img src="/assets/img/cards/blog.jpg" alt="Blog reflections" loading="lazy" decoding="async" />
-            <!-- CMS: Home card label + summary -->
-            <h3>Blog</h3>
-            <p>Messages and long-form reflections.</p>
-            <a href="/en/blog/">Read Blog</a>
-          </article>
-          <article data-reveal>
-            <img src="/assets/img/cards/gallery.jpg" alt="Gallery albums" loading="lazy" decoding="async" />
-            <!-- CMS: Home card label + summary -->
-            <h3>Gallery</h3>
-            <p>Moments from worship and fellowship.</p>
-            <a href="/en/gallery/">View Gallery</a>
-          </article>
-        </div>
-      </section>
+      <div class="news-back">
+        <a href="/en/blog/">← Back to Blog</a>
+      </div>
     </main>
 
     <footer>
-      <section aria-labelledby="footer-info" data-reveal>
+      <section aria-labelledby="footer-info">
         <h2 id="footer-info">Information</h2>
-        <!-- CMS: Footer info block -->
         <p>Good Together Church</p>
         <p>1234 Goodmind St., Together, CA 123456</p>
         <p><a href="mailto:pilgrimbird@gmail.com">pilgrimbird@gmail.com</a></p>
         <p>Sunday Service: 9:00 AM &amp; 11:00 AM</p>
       </section>
 
-      <section aria-labelledby="footer-map" data-reveal>
+      <section aria-labelledby="footer-map">
         <h2 id="footer-map">Content Map</h2>
         <ul>
           <li><a href="/en/">Home</a></li>
@@ -145,7 +92,7 @@
         </ul>
       </section>
 
-      <section aria-labelledby="footer-sns" data-reveal>
+      <section aria-labelledby="footer-sns">
         <h2 id="footer-sns">SNS</h2>
         <ul>
           <li><a href="https://facebook.com">Facebook</a></li>
@@ -154,7 +101,7 @@
         </ul>
       </section>
 
-      <section aria-labelledby="footer-legal" data-reveal>
+      <section aria-labelledby="footer-legal">
         <h2 id="footer-legal">Legal</h2>
         <p>© 2026 Good Together Church</p>
         <ul>
@@ -163,6 +110,11 @@
         </ul>
       </section>
     </footer>
-    <script src="/en/script.js" defer></script>
+
+    <script src="/assets/js/sanitize.js" defer></script>
+    <script src="/assets/js/content-loader.js" defer></script>
+    <script src="/assets/js/pagination.js" defer></script>
+    <script src="/assets/js/blog.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
   </body>
 </html>

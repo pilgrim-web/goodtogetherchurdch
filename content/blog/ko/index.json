@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "title": "기도의 자리",
+      "date": "2025-12-20",
+      "lang": "ko",
+      "cover_image": "/assets/img/hero/home-01.jpg",
+      "excerpt": "기도의 자리에서 하나님을 만납니다.",
+      "status": "published",
+      "slug": "2025-12-prayer",
+      "body_markdown": "# 기도의 자리\n\n침묵의 시간에도 주님이 함께하십니다."
+    }
+  ]
+}

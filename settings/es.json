@@ -1,0 +1,29 @@
+{
+  "church_name": "Good Together Church",
+  "pastor_name": "Rev. Junsoo So",
+  "address_line1": "1234 Goodmind St.",
+  "address_line2": "Together, CA 123456",
+  "email": "pilgrimbird@gmail.com",
+  "service_times": [
+    "Sunday Service: 9:00 AM & 11:00 AM"
+  ],
+  "sns": {
+    "facebook": "https://facebook.com",
+    "instagram": "https://instagram.com",
+    "youtube": "https://youtube.com"
+  },
+  "offering_links": [
+    {
+      "label": "General Offering",
+      "url": "https://buy.stripe.com/test_general"
+    },
+    {
+      "label": "Missions Offering",
+      "url": "https://buy.stripe.com/test_missions"
+    }
+  ],
+  "offering_text": {
+    "intro": "Your generosity helps us serve the city.",
+    "note": "Offerings are processed securely through Stripe."
+  }
+}

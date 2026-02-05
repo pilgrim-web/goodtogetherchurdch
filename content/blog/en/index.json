@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "title": "When Prayer Feels Quiet",
+      "date": "2025-12-20",
+      "lang": "en",
+      "cover_image": "/assets/img/hero/home-01.jpg",
+      "excerpt": "A reflection on staying faithful in seasons of silence.",
+      "status": "published",
+      "slug": "2025-12-when-prayer-feels-quiet",
+      "body_markdown": "# When Prayer Feels Quiet\n\nGod meets us in the quiet. Stay steady in prayer and Scripture."
+    },
+    {
+      "title": "Serving with Open Hands",
+      "date": "2025-11-08",
+      "lang": "en",
+      "cover_image": "/assets/img/hero/home-03.jpg",
+      "excerpt": "Why generosity is a core practice for discipleship.",
+      "status": "published",
+      "slug": "2025-11-serving-with-open-hands",
+      "body_markdown": "# Serving with Open Hands\n\nWe are shaped by generosity and compassion."
+    }
+  ]
+}

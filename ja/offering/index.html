@@ -1,0 +1,152 @@
+<!doctype html>
+        <html lang="ja">
+          <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>Offering | Good Together Church</title>
+            <link rel="stylesheet" href="/en/styles.css" />
+          </head>
+          <body data-page="offering" data-lang="ja">
+            <header>
+  <nav aria-label="Primary">
+    <a href="/ja/" aria-label="Good Together Church Home">Good Together Church</a>
+    <ul>
+      <li><a href="/ja/">ホーム</a></li>
+      <li>
+        <a href="/ja/about/">教会について</a>
+        <ul>
+          <li><a href="/ja/about/staffs/">スタッフ</a></li>
+          <li><a href="/ja/about/pastor-message/">牧師メッセージ</a></li>
+          <li><a href="/ja/about/vision/">ビジョン</a></li>
+          <li><a href="/ja/about/mission/">ミッション</a></li>
+          <li><a href="/ja/about/history/">沿革</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/ja/services/">礼拝</a>
+        <ul>
+          <li><a href="/ja/services/1st-worship/">第1礼拝</a></li>
+          <li><a href="/ja/services/2nd-worship/">第2礼拝</a></li>
+          <li><a href="/ja/services/wednesday-prayer/">水曜祈祷会</a></li>
+          <li><a href="/ja/services/saturday-prayer/">土曜祈祷会</a></li>
+        </ul>
+      </li>
+      <li><a href="/ja/contact/">お問い合わせ</a></li>
+      <li><a href="/ja/news/">ニュース</a></li>
+      <li><a href="/ja/blog/">ブログ</a></li>
+      <li><a href="/ja/gallery/">ギャラリー</a></li>
+      <li><a href="/ja/offering/">献金</a></li>
+      <li data-lang-menu>
+        <button type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">
+          言語
+        </button>
+        <ul id="lang-menu">
+          <li><a href="/en/" lang="en">EN</a></li>
+          <li><a href="/es/" lang="es">ES</a></li>
+          <li><a href="/ko/" lang="ko">KO</a></li>
+          <li><a href="/ja/" lang="ja">JA</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+            <main>
+              <section class="page-hero" aria-label="Offering">
+  <h1>Offering</h1>
+  <p>Your generosity helps us serve our city and support vulnerable families.</p>
+</section>
+<section class="content-section">
+  <div class="form-grid">
+    <div>
+      <h3>Give Online</h3>
+      <p>Select an offering option below. You will be redirected to Stripe.</p>
+      <div data-offering-links class="info-grid"></div>
+    </div>
+    <div>
+      <h3>Prayer for You</h3>
+      <form name="prayer" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/ja/offering/thanks/">
+        <input type="hidden" name="form-name" value="prayer" />
+        <input type="hidden" name="bot-field" />
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Phone (optional)
+          <input type="tel" name="phone" />
+        </label>
+        <label>
+          Category
+          <select name="category" required>
+            <option value="Prayer">Prayer</option>
+            <option value="Visit">Visit</option>
+            <option value="Counseling">Counseling</option>
+            <option value="General">General</option>
+          </select>
+        </label>
+        <label>
+          Prayer Request
+          <textarea name="prayer_request" required></textarea>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" name="consent" required />
+          <span>I consent to the church storing my request for prayer follow-up.</span>
+        </label>
+        <button class="button" type="submit">Submit Request</button>
+        <p class="note">Your information will be used for pastoral care and kept private.</p>
+      </form>
+    </div>
+  </div>
+</section>
+            </main>
+
+            <footer>
+  <section aria-labelledby="footer-info">
+    <h2 id="footer-info">案内</h2>
+    <p>Good Together Church</p>
+    <p>1234 Goodmind St., Together, CA 123456</p>
+    <p><a href="mailto:pilgrimbird@gmail.com">pilgrimbird@gmail.com</a></p>
+    <p>Sunday Service: 9:00 AM &amp; 11:00 AM</p>
+  </section>
+
+  <section aria-labelledby="footer-map">
+    <h2 id="footer-map">サイトマップ</h2>
+    <ul>
+      <li><a href="/ja/">ホーム</a></li>
+      <li><a href="/ja/about/">教会について</a></li>
+      <li><a href="/ja/services/">礼拝</a></li>
+      <li><a href="/ja/news/">ニュース</a></li>
+      <li><a href="/ja/blog/">ブログ</a></li>
+      <li><a href="/ja/gallery/">ギャラリー</a></li>
+      <li><a href="/ja/offering/">献金</a></li>
+      <li><a href="/ja/contact/">お問い合わせ</a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="footer-sns">
+    <h2 id="footer-sns">SNS</h2>
+    <ul>
+      <li><a href="https://facebook.com">Facebook</a></li>
+      <li><a href="https://instagram.com">Instagram</a></li>
+      <li><a href="https://youtube.com">YouTube</a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="footer-legal">
+    <h2 id="footer-legal">法的情報</h2>
+    <p>© 2026 Good Together Church</p>
+    <ul>
+      <li><a href="/ja/legal/privacy/">プライバシー</a></li>
+      <li><a href="/ja/legal/terms/">利用規約</a></li>
+    </ul>
+  </section>
+</footer>
+
+    <script src="/assets/js/main.js" defer></script>
+          </body>
+        </html>

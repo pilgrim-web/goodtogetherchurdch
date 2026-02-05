@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "title": "Oración en Tiempos Difíciles",
+      "date": "2025-12-20",
+      "lang": "es",
+      "cover_image": "/assets/img/hero/home-01.jpg",
+      "excerpt": "Reflexión breve sobre la oración fiel.",
+      "status": "published",
+      "slug": "2025-12-oracion",
+      "body_markdown": "# Oración\n\nDios está con nosotros en cada estación."
+    }
+  ]
+}

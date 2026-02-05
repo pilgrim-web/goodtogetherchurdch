@@ -1,0 +1,16 @@
+{
+  "staffs": [
+    {
+      "name": "Rev. Junsoo So",
+      "role": "Senior Pastor",
+      "email": "pilgrimbird@gmail.com",
+      "photo": "/assets/img/pastor/pastor-portrait.jpg"
+    },
+    {
+      "name": "Grace Kim",
+      "role": "Worship Director",
+      "email": "grace@example.com",
+      "photo": "/assets/img/staffs/staff-01.jpg"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "title": "静けさの祈り",
+      "date": "2025-12-20",
+      "lang": "ja",
+      "cover_image": "/assets/img/hero/home-01.jpg",
+      "excerpt": "静かな時の祈りについて。",
+      "status": "published",
+      "slug": "2025-12-prayer",
+      "body_markdown": "# 静けさの祈り\n\n沈黙の中でも神は共におられます。"
+    }
+  ]
+}

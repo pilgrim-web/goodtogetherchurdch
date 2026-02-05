@@ -1,0 +1,11 @@
+---
+title: "2026年 共に祈りましょう"
+date: "2026-01-12"
+lang: "ja"
+cover_image: "/assets/img/hero/home-02.jpg"
+excerpt: "週ごとの祈りの集いと日々の祈りガイド。"
+status: "published"
+slug: "2026-01-lets-pray-together"
+---
+
+教会全体で祈りに集中する一年です。
