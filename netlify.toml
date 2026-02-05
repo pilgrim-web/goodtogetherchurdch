@@ -1,3 +1,28 @@
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/en/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/es/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/ko/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/ja/*"
+  to = "/:splat"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]

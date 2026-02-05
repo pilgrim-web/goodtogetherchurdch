@@ -17,6 +17,9 @@
     container.innerHTML = "";
     if (totalPages <= 1) return;
 
+    const t = window.Site?.t || ((key) => key);
+    const prevLabel = t("pagination.prev");
+    const nextLabel = t("pagination.next");
     const queryPrefix = queryString ? `?${queryString}&page=` : "?page=";
 
     const createLink = (label, page, isDisabled, isCurrent) => {
@@ -30,7 +33,7 @@
       return el;
     };
 
-    container.appendChild(createLink("Prev", currentPage - 1, currentPage <= 1, false));
+    container.appendChild(createLink(prevLabel, currentPage - 1, currentPage <= 1, false));
 
     const pages = [];
     if (totalPages <= 7) {
@@ -56,7 +59,7 @@
     });
 
     container.appendChild(
-      createLink("Next", currentPage + 1, currentPage >= totalPages, false)
+      createLink(nextLabel, currentPage + 1, currentPage >= totalPages, false)
     );
   };
 

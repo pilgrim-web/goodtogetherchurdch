@@ -16,10 +16,13 @@
   const renderList = async () => {
     const listEl = document.querySelector("#blog-list");
     const paginationEl = document.querySelector("#blog-pagination");
-    const { manifest, lang = "en", basePath = "/en/blog/", postPath = "/en/blog/post/" } =
-      document.body?.dataset || {};
-    const locale = lang === "en" ? "en-US" : lang;
-    if (!listEl || !paginationEl || !manifest) return;
+    const lang = window.Site?.lang || "en";
+    const locale = window.Site?.locale || "en-US";
+    const manifest = `/content/blog/${lang}/index.json`;
+    const basePath = `/${lang}/blog/`;
+    const postPath = `/${lang}/blog/post/`;
+    const t = window.Site?.t || ((key) => key);
+    if (!listEl || !paginationEl) return;
 
     try {
       const posts = await window.ContentLoader.getCollection(manifest, lang);
@@ -33,7 +36,7 @@
       listEl.innerHTML = "";
       if (!pageItems.length) {
         const empty = document.createElement("p");
-        empty.textContent = "No published blog posts yet.";
+        empty.textContent = t("blog.empty");
         listEl.appendChild(empty);
       } else {
         pageItems.forEach((post) => {
@@ -66,7 +69,7 @@
           action.className = "news-card__action";
           const link = document.createElement("a");
           link.href = `${postPath}?slug=${encodeURIComponent(post.slug)}`;
-          link.textContent = "Read";
+          link.textContent = t("actions.read");
           action.appendChild(link);
 
           body.appendChild(title);
@@ -82,7 +85,7 @@
 
       window.Pagination.render(paginationEl, currentPage, totalPages, basePath);
     } catch (error) {
-      listEl.innerHTML = "<p>Unable to load blog right now.</p>";
+      listEl.innerHTML = `<p>${t("blog.error")}</p>`;
       paginationEl.innerHTML = "";
     }
   };
@@ -174,9 +177,12 @@
 
   const renderDetail = async () => {
     const container = document.querySelector("#blog-post");
-    const { manifest, lang = "en", basePath = "/en/blog/" } = document.body?.dataset || {};
-    const locale = lang === "en" ? "en-US" : lang;
-    if (!container || !manifest) return;
+    const lang = window.Site?.lang || "en";
+    const locale = window.Site?.locale || "en-US";
+    const manifest = `/content/blog/${lang}/index.json`;
+    const basePath = `/${lang}/blog/`;
+    const t = window.Site?.t || ((key) => key);
+    if (!container) return;
 
     try {
       const posts = await window.ContentLoader.getCollection(manifest, lang);
@@ -184,7 +190,9 @@
       const post = posts.find((item) => item.slug === slug);
 
       if (!post) {
-        container.innerHTML = `<p>Post not found. <a href="${basePath}">Back to Blog</a></p>`;
+        container.innerHTML = `<p>${t("blog.not_found")} <a href="${basePath}">${t(
+          "blog.back"
+        )}</a></p>`;
         return;
       }
 
@@ -223,7 +231,7 @@
       container.appendChild(hero);
       container.appendChild(body);
     } catch (error) {
-      container.innerHTML = "<p>Unable to load this post.</p>";
+      container.innerHTML = `<p>${t("blog.load_error")}</p>`;
     }
   };
 

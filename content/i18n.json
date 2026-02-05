@@ -1,0 +1,1086 @@
+{
+  "en": {
+    "nav": {
+      "home": "ホーム",
+      "about": "教会について",
+      "staffs": "Staffs",
+      "pastor_message": "Message from Pastor",
+      "vision": "Vision",
+      "mission": "Mission",
+      "history": "History",
+      "services": "礼拝",
+      "w1": "1st Worship",
+      "w2": "2nd Worship",
+      "wed": "Wednesday Prayer",
+      "sat": "Saturday Prayer",
+      "contact": "Contact",
+      "news": "ニュース",
+      "blog": "Blog",
+      "gallery": "ギャラリー",
+      "offering": "献金",
+      "language": "言語",
+      "lang_en": "EN",
+      "lang_es": "ES",
+      "lang_ko": "KO",
+      "lang_ja": "JA"
+    },
+    "footer": {
+      "info_title": "案内",
+      "map_title": "サイトマップ",
+      "sns_title": "SNS",
+      "legal_title": "法的情報",
+      "church_name": "Good Together Church",
+      "address_line1": "1234 Goodmind St.",
+      "address_line2": "Together, CA 123456",
+      "email": "pilgrimbird@gmail.com",
+      "service_times": "Sunday Service: 9:00 AM & 11:00 AM",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "copyright": "© 2026 Good Together Church",
+      "sns_facebook": "Facebook",
+      "sns_instagram": "Instagram",
+      "sns_youtube": "YouTube"
+    },
+    "actions": {
+      "read": "読む",
+      "view_album": "アルバムを見る",
+      "back_news": "Back to News",
+      "back_blog": "Back to Blog",
+      "back_gallery": "Back to Gallery",
+      "back_home": "Back to Home",
+      "back_contact": "Back to Contact",
+      "back_offering": "Back to Offering"
+    },
+    "forms": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "phone": "Phone (optional)",
+      "category": "Category",
+      "prayer_request": "Prayer Request",
+      "consent": "I consent to the church storing my request for prayer follow-up.",
+      "submit": "Submit Request",
+      "send": "Send Message",
+      "privacy_note": "Your information will be used for pastoral care and kept private.",
+      "contact_note": "We will reply within 2-3 business days.",
+      "cat_prayer": "Prayer",
+      "cat_visit": "Visit",
+      "cat_counseling": "Counseling",
+      "cat_general": "General"
+    },
+    "home": {
+      "hero": {
+        "title": "2026, Let’s Pray Together",
+        "subtitle": "A year of prayer, discipleship, and compassionate care.",
+        "alt_1": "Worship gathering",
+        "alt_2": "Community prayer",
+        "alt_3": "Sunday service",
+        "alt_4": "Fellowship time"
+      },
+      "welcome": {
+        "title": "Welcome / Who We Are",
+        "body": "We are a Christ-centered church in the neighborhood, gathering weekly to worship, grow in the Word, and serve with compassion."
+      },
+      "vision": {
+        "title": "Vision",
+        "body": "One family in Christ, praying faithfully and serving our city with hope."
+      },
+      "explore": {
+        "title": "Explore",
+        "services": {
+          "title": "Services",
+          "body": "Worship times and prayer gatherings.",
+          "cta": "View Services",
+          "alt": "Service times"
+        },
+        "news": {
+          "title": "News",
+          "body": "Announcements and community updates.",
+          "cta": "Read News",
+          "alt": "Church news"
+        },
+        "blog": {
+          "title": "Blog",
+          "body": "Messages and long-form reflections.",
+          "cta": "Read Blog",
+          "alt": "Blog reflections"
+        },
+        "gallery": {
+          "title": "Gallery",
+          "body": "Moments from worship and fellowship.",
+          "cta": "View Gallery",
+          "alt": "Gallery albums"
+        }
+      }
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "We are a Christ-centered church committed to prayer, discipleship, and serving our neighbors with compassion.",
+      "cards": {
+        "heart_title": "Our Heart",
+        "heart_body": "We want every person to feel known, loved, and equipped to follow Jesus.",
+        "community_title": "Our Community",
+        "community_body": "We partner with local ministries to support vulnerable children and families.",
+        "rhythm_title": "Our Rhythm",
+        "rhythm_body": "Worship, prayer, and shared meals shape the way we grow together."
+      }
+    },
+    "staffs": {
+      "title": "Staffs",
+      "subtitle": "Meet the team serving our church community.",
+      "staff_1_name": "Rev. Junsoo So",
+      "staff_1_role": "Senior Pastor",
+      "staff_1_email": "pilgrimbird@gmail.com",
+      "staff_2_name": "Grace Kim",
+      "staff_2_role": "Worship Director",
+      "staff_2_email": "grace@example.com",
+      "staff_3_name": "Daniel Park",
+      "staff_3_role": "Community Care",
+      "staff_3_email": "daniel@example.com"
+    },
+    "pastor": {
+      "title": "Greetings from Your Pastor",
+      "subtitle": "A word of welcome from our shepherd.",
+      "body_1": "Welcome to Good Together Church. It is a joy to serve alongside you as we seek Jesus, love our neighbors, and grow as a family of faith.",
+      "body_2": "Our church is committed to prayer, Scripture, and compassionate action. We believe God is at work in every season, and we want to walk with you through worship, discipleship, and community care.",
+      "body_3": "Whether you are new to faith or have followed Christ for years, you belong here. I look forward to meeting you and praying with you.",
+      "signature": "Rev. Junsoo So"
+    },
+    "vision": {
+      "title": "Vision",
+      "subtitle": "We envision a church that collaborates with local partners to uplift vulnerable children and families.",
+      "culture_title": "Culture Values",
+      "culture_1": "Christ-centered worship",
+      "culture_2": "Generous service",
+      "culture_3": "Intergenerational community",
+      "culture_4": "Global compassion",
+      "pillars_title": "Ministry Pillars",
+      "pillar_1": "Worship & Prayer",
+      "pillar_2": "Discipleship",
+      "pillar_3": "Family Care",
+      "pillar_4": "Next-Gen",
+      "pillar_5": "Community Outreach"
+    },
+    "mission": {
+      "title": "Mission",
+      "subtitle": "We make disciples who love God and neighbor with a special focus on vulnerable children and families.",
+      "body": "We commit to a culture of humility, kindness, and faithful presence.",
+      "point_1": "Mentoring and practical support",
+      "point_2": "Consistent prayer and spiritual care",
+      "point_3": "Equipping families for long-term flourishing"
+    },
+    "history": {
+      "title": "History",
+      "subtitle": "A brief timeline of God’s faithfulness in our church family.",
+      "event_1": "2015: Good Together Church launched with a small prayer group.",
+      "event_2": "2018: Expanded to two Sunday services and neighborhood outreach.",
+      "event_3": "2023: Opened community care partnerships for families in need.",
+      "event_4": "2026: Entered a year-long focus on prayer and discipleship."
+    },
+    "services": {
+      "title": "Services",
+      "subtitle": "Join us for worship and prayer gatherings throughout the week.",
+      "s1_title": "1st Worship",
+      "s1_time": "Sunday 9:00 AM",
+      "s2_title": "2nd Worship",
+      "s2_time": "Sunday 11:00 AM",
+      "wed_title": "Wednesday Prayer",
+      "wed_time": "Wednesday 7:30 PM",
+      "sat_title": "Saturday Prayer",
+      "sat_time": "Saturday 6:30 AM",
+      "details": "Details"
+    },
+    "service_details": {
+      "w1_title": "1st Worship",
+      "w1_body": "Sunday at 9:00 AM. A welcoming service for the whole family.",
+      "w1_note": "Expect worship, prayer, and a teaching message. Children’s ministry is available.",
+      "w2_title": "2nd Worship",
+      "w2_body": "Sunday at 11:00 AM. A mid-morning gathering with extended worship.",
+      "w2_note": "Join us for worship, Scripture, and community prayer.",
+      "wed_title": "Wednesday Prayer",
+      "wed_body": "Wednesday at 7:30 PM. Weekly prayer and encouragement.",
+      "wed_note": "We gather to pray for our church, city, and one another.",
+      "sat_title": "Saturday Prayer",
+      "sat_body": "Saturday at 6:30 AM. Start the weekend in prayer.",
+      "sat_note": "Join us for early morning prayer and a short devotional."
+    },
+    "news": {
+      "title": "News",
+      "subtitle": "Stories and announcements from our community.",
+      "empty": "No published news posts yet.",
+      "error": "Unable to load news right now.",
+      "not_found": "Post not found.",
+      "back": "Back to News",
+      "load_error": "Unable to load this post.",
+      "loading": "Loading news…"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Long-form reflections, stories, and teaching notes.",
+      "empty": "No published blog posts yet.",
+      "error": "Unable to load blog right now.",
+      "not_found": "Post not found.",
+      "back": "Back to Blog",
+      "load_error": "Unable to load this post.",
+      "loading": "Loading blog…"
+    },
+    "gallery": {
+      "title": "Gallery",
+      "subtitle": "Albums from worship, outreach, and community life.",
+      "empty": "No published albums yet.",
+      "error": "Unable to load gallery right now.",
+      "not_found": "Album not found.",
+      "back": "Back to Gallery",
+      "load_error": "Unable to load this album.",
+      "loading": "Loading gallery…"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "We would love to hear from you.",
+      "info_title": "Contact Info",
+      "address": "Address: 1234 Goodmind St., Together, CA 123456",
+      "email": "Email: pilgrimbird@gmail.com",
+      "pastor": "Pastor: Rev. Junsoo So",
+      "thanks_title": "Thank You",
+      "thanks_body": "Your message has been received."
+    },
+    "offering": {
+      "title": "Offering",
+      "subtitle": "Your generosity helps us serve our city and support vulnerable families.",
+      "give_title": "Give Online",
+      "give_body": "Select an offering option below. You will be redirected to Stripe.",
+      "links_empty": "Offering links coming soon.",
+      "links_error": "Offering links are unavailable right now.",
+      "prayer_title": "Prayer for You",
+      "thanks_title": "Thank You",
+      "thanks_body": "We received your offering or prayer request."
+    },
+    "legal": {
+      "privacy_title": "Privacy Policy",
+      "privacy_body": "We only collect information submitted through our forms and use it for pastoral care and communication. We do not sell your information.",
+      "terms_title": "Terms of Use",
+      "terms_body": "Content is provided for church communication and may change without notice."
+    },
+    "not_found": {
+      "title": "Page Not Found",
+      "body": "We could not find the page you were looking for."
+    },
+    "pagination": {
+      "prev": "Prev",
+      "next": "Next"
+    }
+  },
+  "es": {
+    "nav": {
+      "home": "ホーム",
+      "about": "教会について",
+      "staffs": "Staffs",
+      "pastor_message": "Message from Pastor",
+      "vision": "Vision",
+      "mission": "Mission",
+      "history": "History",
+      "services": "礼拝",
+      "w1": "1st Worship",
+      "w2": "2nd Worship",
+      "wed": "Wednesday Prayer",
+      "sat": "Saturday Prayer",
+      "contact": "Contact",
+      "news": "ニュース",
+      "blog": "Blog",
+      "gallery": "ギャラリー",
+      "offering": "献金",
+      "language": "言語",
+      "lang_en": "EN",
+      "lang_es": "ES",
+      "lang_ko": "KO",
+      "lang_ja": "JA"
+    },
+    "footer": {
+      "info_title": "案内",
+      "map_title": "サイトマップ",
+      "sns_title": "SNS",
+      "legal_title": "法的情報",
+      "church_name": "Good Together Church",
+      "address_line1": "1234 Goodmind St.",
+      "address_line2": "Together, CA 123456",
+      "email": "pilgrimbird@gmail.com",
+      "service_times": "Sunday Service: 9:00 AM & 11:00 AM",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "copyright": "© 2026 Good Together Church",
+      "sns_facebook": "Facebook",
+      "sns_instagram": "Instagram",
+      "sns_youtube": "YouTube"
+    },
+    "actions": {
+      "read": "読む",
+      "view_album": "アルバムを見る",
+      "back_news": "Back to News",
+      "back_blog": "Back to Blog",
+      "back_gallery": "Back to Gallery",
+      "back_home": "Back to Home",
+      "back_contact": "Back to Contact",
+      "back_offering": "Back to Offering"
+    },
+    "forms": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "phone": "Phone (optional)",
+      "category": "Category",
+      "prayer_request": "Prayer Request",
+      "consent": "I consent to the church storing my request for prayer follow-up.",
+      "submit": "Submit Request",
+      "send": "Send Message",
+      "privacy_note": "Your information will be used for pastoral care and kept private.",
+      "contact_note": "We will reply within 2-3 business days.",
+      "cat_prayer": "Prayer",
+      "cat_visit": "Visit",
+      "cat_counseling": "Counseling",
+      "cat_general": "General"
+    },
+    "home": {
+      "hero": {
+        "title": "2026, Let’s Pray Together",
+        "subtitle": "A year of prayer, discipleship, and compassionate care.",
+        "alt_1": "Worship gathering",
+        "alt_2": "Community prayer",
+        "alt_3": "Sunday service",
+        "alt_4": "Fellowship time"
+      },
+      "welcome": {
+        "title": "Welcome / Who We Are",
+        "body": "We are a Christ-centered church in the neighborhood, gathering weekly to worship, grow in the Word, and serve with compassion."
+      },
+      "vision": {
+        "title": "Vision",
+        "body": "One family in Christ, praying faithfully and serving our city with hope."
+      },
+      "explore": {
+        "title": "Explore",
+        "services": {
+          "title": "Services",
+          "body": "Worship times and prayer gatherings.",
+          "cta": "View Services",
+          "alt": "Service times"
+        },
+        "news": {
+          "title": "News",
+          "body": "Announcements and community updates.",
+          "cta": "Read News",
+          "alt": "Church news"
+        },
+        "blog": {
+          "title": "Blog",
+          "body": "Messages and long-form reflections.",
+          "cta": "Read Blog",
+          "alt": "Blog reflections"
+        },
+        "gallery": {
+          "title": "Gallery",
+          "body": "Moments from worship and fellowship.",
+          "cta": "View Gallery",
+          "alt": "Gallery albums"
+        }
+      }
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "We are a Christ-centered church committed to prayer, discipleship, and serving our neighbors with compassion.",
+      "cards": {
+        "heart_title": "Our Heart",
+        "heart_body": "We want every person to feel known, loved, and equipped to follow Jesus.",
+        "community_title": "Our Community",
+        "community_body": "We partner with local ministries to support vulnerable children and families.",
+        "rhythm_title": "Our Rhythm",
+        "rhythm_body": "Worship, prayer, and shared meals shape the way we grow together."
+      }
+    },
+    "staffs": {
+      "title": "Staffs",
+      "subtitle": "Meet the team serving our church community.",
+      "staff_1_name": "Rev. Junsoo So",
+      "staff_1_role": "Senior Pastor",
+      "staff_1_email": "pilgrimbird@gmail.com",
+      "staff_2_name": "Grace Kim",
+      "staff_2_role": "Worship Director",
+      "staff_2_email": "grace@example.com",
+      "staff_3_name": "Daniel Park",
+      "staff_3_role": "Community Care",
+      "staff_3_email": "daniel@example.com"
+    },
+    "pastor": {
+      "title": "Greetings from Your Pastor",
+      "subtitle": "A word of welcome from our shepherd.",
+      "body_1": "Welcome to Good Together Church. It is a joy to serve alongside you as we seek Jesus, love our neighbors, and grow as a family of faith.",
+      "body_2": "Our church is committed to prayer, Scripture, and compassionate action. We believe God is at work in every season, and we want to walk with you through worship, discipleship, and community care.",
+      "body_3": "Whether you are new to faith or have followed Christ for years, you belong here. I look forward to meeting you and praying with you.",
+      "signature": "Rev. Junsoo So"
+    },
+    "vision": {
+      "title": "Vision",
+      "subtitle": "We envision a church that collaborates with local partners to uplift vulnerable children and families.",
+      "culture_title": "Culture Values",
+      "culture_1": "Christ-centered worship",
+      "culture_2": "Generous service",
+      "culture_3": "Intergenerational community",
+      "culture_4": "Global compassion",
+      "pillars_title": "Ministry Pillars",
+      "pillar_1": "Worship & Prayer",
+      "pillar_2": "Discipleship",
+      "pillar_3": "Family Care",
+      "pillar_4": "Next-Gen",
+      "pillar_5": "Community Outreach"
+    },
+    "mission": {
+      "title": "Mission",
+      "subtitle": "We make disciples who love God and neighbor with a special focus on vulnerable children and families.",
+      "body": "We commit to a culture of humility, kindness, and faithful presence.",
+      "point_1": "Mentoring and practical support",
+      "point_2": "Consistent prayer and spiritual care",
+      "point_3": "Equipping families for long-term flourishing"
+    },
+    "history": {
+      "title": "History",
+      "subtitle": "A brief timeline of God’s faithfulness in our church family.",
+      "event_1": "2015: Good Together Church launched with a small prayer group.",
+      "event_2": "2018: Expanded to two Sunday services and neighborhood outreach.",
+      "event_3": "2023: Opened community care partnerships for families in need.",
+      "event_4": "2026: Entered a year-long focus on prayer and discipleship."
+    },
+    "services": {
+      "title": "Services",
+      "subtitle": "Join us for worship and prayer gatherings throughout the week.",
+      "s1_title": "1st Worship",
+      "s1_time": "Sunday 9:00 AM",
+      "s2_title": "2nd Worship",
+      "s2_time": "Sunday 11:00 AM",
+      "wed_title": "Wednesday Prayer",
+      "wed_time": "Wednesday 7:30 PM",
+      "sat_title": "Saturday Prayer",
+      "sat_time": "Saturday 6:30 AM",
+      "details": "Details"
+    },
+    "service_details": {
+      "w1_title": "1st Worship",
+      "w1_body": "Sunday at 9:00 AM. A welcoming service for the whole family.",
+      "w1_note": "Expect worship, prayer, and a teaching message. Children’s ministry is available.",
+      "w2_title": "2nd Worship",
+      "w2_body": "Sunday at 11:00 AM. A mid-morning gathering with extended worship.",
+      "w2_note": "Join us for worship, Scripture, and community prayer.",
+      "wed_title": "Wednesday Prayer",
+      "wed_body": "Wednesday at 7:30 PM. Weekly prayer and encouragement.",
+      "wed_note": "We gather to pray for our church, city, and one another.",
+      "sat_title": "Saturday Prayer",
+      "sat_body": "Saturday at 6:30 AM. Start the weekend in prayer.",
+      "sat_note": "Join us for early morning prayer and a short devotional."
+    },
+    "news": {
+      "title": "News",
+      "subtitle": "Stories and announcements from our community.",
+      "empty": "No published news posts yet.",
+      "error": "Unable to load news right now.",
+      "not_found": "Post not found.",
+      "back": "Back to News",
+      "load_error": "Unable to load this post.",
+      "loading": "Loading news…"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Long-form reflections, stories, and teaching notes.",
+      "empty": "No published blog posts yet.",
+      "error": "Unable to load blog right now.",
+      "not_found": "Post not found.",
+      "back": "Back to Blog",
+      "load_error": "Unable to load this post.",
+      "loading": "Loading blog…"
+    },
+    "gallery": {
+      "title": "Gallery",
+      "subtitle": "Albums from worship, outreach, and community life.",
+      "empty": "No published albums yet.",
+      "error": "Unable to load gallery right now.",
+      "not_found": "Album not found.",
+      "back": "Back to Gallery",
+      "load_error": "Unable to load this album.",
+      "loading": "Loading gallery…"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "We would love to hear from you.",
+      "info_title": "Contact Info",
+      "address": "Address: 1234 Goodmind St., Together, CA 123456",
+      "email": "Email: pilgrimbird@gmail.com",
+      "pastor": "Pastor: Rev. Junsoo So",
+      "thanks_title": "Thank You",
+      "thanks_body": "Your message has been received."
+    },
+    "offering": {
+      "title": "Offering",
+      "subtitle": "Your generosity helps us serve our city and support vulnerable families.",
+      "give_title": "Give Online",
+      "give_body": "Select an offering option below. You will be redirected to Stripe.",
+      "links_empty": "Offering links coming soon.",
+      "links_error": "Offering links are unavailable right now.",
+      "prayer_title": "Prayer for You",
+      "thanks_title": "Thank You",
+      "thanks_body": "We received your offering or prayer request."
+    },
+    "legal": {
+      "privacy_title": "Privacy Policy",
+      "privacy_body": "We only collect information submitted through our forms and use it for pastoral care and communication. We do not sell your information.",
+      "terms_title": "Terms of Use",
+      "terms_body": "Content is provided for church communication and may change without notice."
+    },
+    "not_found": {
+      "title": "Page Not Found",
+      "body": "We could not find the page you were looking for."
+    },
+    "pagination": {
+      "prev": "Prev",
+      "next": "Next"
+    }
+  },
+  "ko": {
+    "nav": {
+      "home": "ホーム",
+      "about": "教会について",
+      "staffs": "Staffs",
+      "pastor_message": "Message from Pastor",
+      "vision": "Vision",
+      "mission": "Mission",
+      "history": "History",
+      "services": "礼拝",
+      "w1": "1st Worship",
+      "w2": "2nd Worship",
+      "wed": "Wednesday Prayer",
+      "sat": "Saturday Prayer",
+      "contact": "Contact",
+      "news": "ニュース",
+      "blog": "Blog",
+      "gallery": "ギャラリー",
+      "offering": "献金",
+      "language": "言語",
+      "lang_en": "EN",
+      "lang_es": "ES",
+      "lang_ko": "KO",
+      "lang_ja": "JA"
+    },
+    "footer": {
+      "info_title": "案内",
+      "map_title": "サイトマップ",
+      "sns_title": "SNS",
+      "legal_title": "法的情報",
+      "church_name": "Good Together Church",
+      "address_line1": "1234 Goodmind St.",
+      "address_line2": "Together, CA 123456",
+      "email": "pilgrimbird@gmail.com",
+      "service_times": "Sunday Service: 9:00 AM & 11:00 AM",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "copyright": "© 2026 Good Together Church",
+      "sns_facebook": "Facebook",
+      "sns_instagram": "Instagram",
+      "sns_youtube": "YouTube"
+    },
+    "actions": {
+      "read": "読む",
+      "view_album": "アルバムを見る",
+      "back_news": "Back to News",
+      "back_blog": "Back to Blog",
+      "back_gallery": "Back to Gallery",
+      "back_home": "Back to Home",
+      "back_contact": "Back to Contact",
+      "back_offering": "Back to Offering"
+    },
+    "forms": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "phone": "Phone (optional)",
+      "category": "Category",
+      "prayer_request": "Prayer Request",
+      "consent": "I consent to the church storing my request for prayer follow-up.",
+      "submit": "Submit Request",
+      "send": "Send Message",
+      "privacy_note": "Your information will be used for pastoral care and kept private.",
+      "contact_note": "We will reply within 2-3 business days.",
+      "cat_prayer": "Prayer",
+      "cat_visit": "Visit",
+      "cat_counseling": "Counseling",
+      "cat_general": "General"
+    },
+    "home": {
+      "hero": {
+        "title": "2026, Let’s Pray Together",
+        "subtitle": "A year of prayer, discipleship, and compassionate care.",
+        "alt_1": "Worship gathering",
+        "alt_2": "Community prayer",
+        "alt_3": "Sunday service",
+        "alt_4": "Fellowship time"
+      },
+      "welcome": {
+        "title": "Welcome / Who We Are",
+        "body": "We are a Christ-centered church in the neighborhood, gathering weekly to worship, grow in the Word, and serve with compassion."
+      },
+      "vision": {
+        "title": "Vision",
+        "body": "One family in Christ, praying faithfully and serving our city with hope."
+      },
+      "explore": {
+        "title": "Explore",
+        "services": {
+          "title": "Services",
+          "body": "Worship times and prayer gatherings.",
+          "cta": "View Services",
+          "alt": "Service times"
+        },
+        "news": {
+          "title": "News",
+          "body": "Announcements and community updates.",
+          "cta": "Read News",
+          "alt": "Church news"
+        },
+        "blog": {
+          "title": "Blog",
+          "body": "Messages and long-form reflections.",
+          "cta": "Read Blog",
+          "alt": "Blog reflections"
+        },
+        "gallery": {
+          "title": "Gallery",
+          "body": "Moments from worship and fellowship.",
+          "cta": "View Gallery",
+          "alt": "Gallery albums"
+        }
+      }
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "We are a Christ-centered church committed to prayer, discipleship, and serving our neighbors with compassion.",
+      "cards": {
+        "heart_title": "Our Heart",
+        "heart_body": "We want every person to feel known, loved, and equipped to follow Jesus.",
+        "community_title": "Our Community",
+        "community_body": "We partner with local ministries to support vulnerable children and families.",
+        "rhythm_title": "Our Rhythm",
+        "rhythm_body": "Worship, prayer, and shared meals shape the way we grow together."
+      }
+    },
+    "staffs": {
+      "title": "Staffs",
+      "subtitle": "Meet the team serving our church community.",
+      "staff_1_name": "Rev. Junsoo So",
+      "staff_1_role": "Senior Pastor",
+      "staff_1_email": "pilgrimbird@gmail.com",
+      "staff_2_name": "Grace Kim",
+      "staff_2_role": "Worship Director",
+      "staff_2_email": "grace@example.com",
+      "staff_3_name": "Daniel Park",
+      "staff_3_role": "Community Care",
+      "staff_3_email": "daniel@example.com"
+    },
+    "pastor": {
+      "title": "Greetings from Your Pastor",
+      "subtitle": "A word of welcome from our shepherd.",
+      "body_1": "Welcome to Good Together Church. It is a joy to serve alongside you as we seek Jesus, love our neighbors, and grow as a family of faith.",
+      "body_2": "Our church is committed to prayer, Scripture, and compassionate action. We believe God is at work in every season, and we want to walk with you through worship, discipleship, and community care.",
+      "body_3": "Whether you are new to faith or have followed Christ for years, you belong here. I look forward to meeting you and praying with you.",
+      "signature": "Rev. Junsoo So"
+    },
+    "vision": {
+      "title": "Vision",
+      "subtitle": "We envision a church that collaborates with local partners to uplift vulnerable children and families.",
+      "culture_title": "Culture Values",
+      "culture_1": "Christ-centered worship",
+      "culture_2": "Generous service",
+      "culture_3": "Intergenerational community",
+      "culture_4": "Global compassion",
+      "pillars_title": "Ministry Pillars",
+      "pillar_1": "Worship & Prayer",
+      "pillar_2": "Discipleship",
+      "pillar_3": "Family Care",
+      "pillar_4": "Next-Gen",
+      "pillar_5": "Community Outreach"
+    },
+    "mission": {
+      "title": "Mission",
+      "subtitle": "We make disciples who love God and neighbor with a special focus on vulnerable children and families.",
+      "body": "We commit to a culture of humility, kindness, and faithful presence.",
+      "point_1": "Mentoring and practical support",
+      "point_2": "Consistent prayer and spiritual care",
+      "point_3": "Equipping families for long-term flourishing"
+    },
+    "history": {
+      "title": "History",
+      "subtitle": "A brief timeline of God’s faithfulness in our church family.",
+      "event_1": "2015: Good Together Church launched with a small prayer group.",
+      "event_2": "2018: Expanded to two Sunday services and neighborhood outreach.",
+      "event_3": "2023: Opened community care partnerships for families in need.",
+      "event_4": "2026: Entered a year-long focus on prayer and discipleship."
+    },
+    "services": {
+      "title": "Services",
+      "subtitle": "Join us for worship and prayer gatherings throughout the week.",
+      "s1_title": "1st Worship",
+      "s1_time": "Sunday 9:00 AM",
+      "s2_title": "2nd Worship",
+      "s2_time": "Sunday 11:00 AM",
+      "wed_title": "Wednesday Prayer",
+      "wed_time": "Wednesday 7:30 PM",
+      "sat_title": "Saturday Prayer",
+      "sat_time": "Saturday 6:30 AM",
+      "details": "Details"
+    },
+    "service_details": {
+      "w1_title": "1st Worship",
+      "w1_body": "Sunday at 9:00 AM. A welcoming service for the whole family.",
+      "w1_note": "Expect worship, prayer, and a teaching message. Children’s ministry is available.",
+      "w2_title": "2nd Worship",
+      "w2_body": "Sunday at 11:00 AM. A mid-morning gathering with extended worship.",
+      "w2_note": "Join us for worship, Scripture, and community prayer.",
+      "wed_title": "Wednesday Prayer",
+      "wed_body": "Wednesday at 7:30 PM. Weekly prayer and encouragement.",
+      "wed_note": "We gather to pray for our church, city, and one another.",
+      "sat_title": "Saturday Prayer",
+      "sat_body": "Saturday at 6:30 AM. Start the weekend in prayer.",
+      "sat_note": "Join us for early morning prayer and a short devotional."
+    },
+    "news": {
+      "title": "News",
+      "subtitle": "Stories and announcements from our community.",
+      "empty": "No published news posts yet.",
+      "error": "Unable to load news right now.",
+      "not_found": "Post not found.",
+      "back": "Back to News",
+      "load_error": "Unable to load this post.",
+      "loading": "Loading news…"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Long-form reflections, stories, and teaching notes.",
+      "empty": "No published blog posts yet.",
+      "error": "Unable to load blog right now.",
+      "not_found": "Post not found.",
+      "back": "Back to Blog",
+      "load_error": "Unable to load this post.",
+      "loading": "Loading blog…"
+    },
+    "gallery": {
+      "title": "Gallery",
+      "subtitle": "Albums from worship, outreach, and community life.",
+      "empty": "No published albums yet.",
+      "error": "Unable to load gallery right now.",
+      "not_found": "Album not found.",
+      "back": "Back to Gallery",
+      "load_error": "Unable to load this album.",
+      "loading": "Loading gallery…"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "We would love to hear from you.",
+      "info_title": "Contact Info",
+      "address": "Address: 1234 Goodmind St., Together, CA 123456",
+      "email": "Email: pilgrimbird@gmail.com",
+      "pastor": "Pastor: Rev. Junsoo So",
+      "thanks_title": "Thank You",
+      "thanks_body": "Your message has been received."
+    },
+    "offering": {
+      "title": "Offering",
+      "subtitle": "Your generosity helps us serve our city and support vulnerable families.",
+      "give_title": "Give Online",
+      "give_body": "Select an offering option below. You will be redirected to Stripe.",
+      "links_empty": "Offering links coming soon.",
+      "links_error": "Offering links are unavailable right now.",
+      "prayer_title": "Prayer for You",
+      "thanks_title": "Thank You",
+      "thanks_body": "We received your offering or prayer request."
+    },
+    "legal": {
+      "privacy_title": "Privacy Policy",
+      "privacy_body": "We only collect information submitted through our forms and use it for pastoral care and communication. We do not sell your information.",
+      "terms_title": "Terms of Use",
+      "terms_body": "Content is provided for church communication and may change without notice."
+    },
+    "not_found": {
+      "title": "Page Not Found",
+      "body": "We could not find the page you were looking for."
+    },
+    "pagination": {
+      "prev": "Prev",
+      "next": "Next"
+    }
+  },
+  "ja": {
+    "nav": {
+      "home": "ホーム",
+      "about": "教会について",
+      "staffs": "Staffs",
+      "pastor_message": "Message from Pastor",
+      "vision": "Vision",
+      "mission": "Mission",
+      "history": "History",
+      "services": "礼拝",
+      "w1": "1st Worship",
+      "w2": "2nd Worship",
+      "wed": "Wednesday Prayer",
+      "sat": "Saturday Prayer",
+      "contact": "Contact",
+      "news": "ニュース",
+      "blog": "Blog",
+      "gallery": "ギャラリー",
+      "offering": "献金",
+      "language": "言語",
+      "lang_en": "EN",
+      "lang_es": "ES",
+      "lang_ko": "KO",
+      "lang_ja": "JA"
+    },
+    "footer": {
+      "info_title": "案内",
+      "map_title": "サイトマップ",
+      "sns_title": "SNS",
+      "legal_title": "法的情報",
+      "church_name": "Good Together Church",
+      "address_line1": "1234 Goodmind St.",
+      "address_line2": "Together, CA 123456",
+      "email": "pilgrimbird@gmail.com",
+      "service_times": "Sunday Service: 9:00 AM & 11:00 AM",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "copyright": "© 2026 Good Together Church",
+      "sns_facebook": "Facebook",
+      "sns_instagram": "Instagram",
+      "sns_youtube": "YouTube"
+    },
+    "actions": {
+      "read": "読む",
+      "view_album": "アルバムを見る",
+      "back_news": "Back to News",
+      "back_blog": "Back to Blog",
+      "back_gallery": "Back to Gallery",
+      "back_home": "Back to Home",
+      "back_contact": "Back to Contact",
+      "back_offering": "Back to Offering"
+    },
+    "forms": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "phone": "Phone (optional)",
+      "category": "Category",
+      "prayer_request": "Prayer Request",
+      "consent": "I consent to the church storing my request for prayer follow-up.",
+      "submit": "Submit Request",
+      "send": "Send Message",
+      "privacy_note": "Your information will be used for pastoral care and kept private.",
+      "contact_note": "We will reply within 2-3 business days.",
+      "cat_prayer": "Prayer",
+      "cat_visit": "Visit",
+      "cat_counseling": "Counseling",
+      "cat_general": "General"
+    },
+    "home": {
+      "hero": {
+        "title": "2026, Let’s Pray Together",
+        "subtitle": "A year of prayer, discipleship, and compassionate care.",
+        "alt_1": "Worship gathering",
+        "alt_2": "Community prayer",
+        "alt_3": "Sunday service",
+        "alt_4": "Fellowship time"
+      },
+      "welcome": {
+        "title": "Welcome / Who We Are",
+        "body": "We are a Christ-centered church in the neighborhood, gathering weekly to worship, grow in the Word, and serve with compassion."
+      },
+      "vision": {
+        "title": "Vision",
+        "body": "One family in Christ, praying faithfully and serving our city with hope."
+      },
+      "explore": {
+        "title": "Explore",
+        "services": {
+          "title": "Services",
+          "body": "Worship times and prayer gatherings.",
+          "cta": "View Services",
+          "alt": "Service times"
+        },
+        "news": {
+          "title": "News",
+          "body": "Announcements and community updates.",
+          "cta": "Read News",
+          "alt": "Church news"
+        },
+        "blog": {
+          "title": "Blog",
+          "body": "Messages and long-form reflections.",
+          "cta": "Read Blog",
+          "alt": "Blog reflections"
+        },
+        "gallery": {
+          "title": "Gallery",
+          "body": "Moments from worship and fellowship.",
+          "cta": "View Gallery",
+          "alt": "Gallery albums"
+        }
+      }
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "We are a Christ-centered church committed to prayer, discipleship, and serving our neighbors with compassion.",
+      "cards": {
+        "heart_title": "Our Heart",
+        "heart_body": "We want every person to feel known, loved, and equipped to follow Jesus.",
+        "community_title": "Our Community",
+        "community_body": "We partner with local ministries to support vulnerable children and families.",
+        "rhythm_title": "Our Rhythm",
+        "rhythm_body": "Worship, prayer, and shared meals shape the way we grow together."
+      }
+    },
+    "staffs": {
+      "title": "Staffs",
+      "subtitle": "Meet the team serving our church community.",
+      "staff_1_name": "Rev. Junsoo So",
+      "staff_1_role": "Senior Pastor",
+      "staff_1_email": "pilgrimbird@gmail.com",
+      "staff_2_name": "Grace Kim",
+      "staff_2_role": "Worship Director",
+      "staff_2_email": "grace@example.com",
+      "staff_3_name": "Daniel Park",
+      "staff_3_role": "Community Care",
+      "staff_3_email": "daniel@example.com"
+    },
+    "pastor": {
+      "title": "Greetings from Your Pastor",
+      "subtitle": "A word of welcome from our shepherd.",
+      "body_1": "Welcome to Good Together Church. It is a joy to serve alongside you as we seek Jesus, love our neighbors, and grow as a family of faith.",
+      "body_2": "Our church is committed to prayer, Scripture, and compassionate action. We believe God is at work in every season, and we want to walk with you through worship, discipleship, and community care.",
+      "body_3": "Whether you are new to faith or have followed Christ for years, you belong here. I look forward to meeting you and praying with you.",
+      "signature": "Rev. Junsoo So"
+    },
+    "vision": {
+      "title": "Vision",
+      "subtitle": "We envision a church that collaborates with local partners to uplift vulnerable children and families.",
+      "culture_title": "Culture Values",
+      "culture_1": "Christ-centered worship",
+      "culture_2": "Generous service",
+      "culture_3": "Intergenerational community",
+      "culture_4": "Global compassion",
+      "pillars_title": "Ministry Pillars",
+      "pillar_1": "Worship & Prayer",
+      "pillar_2": "Discipleship",
+      "pillar_3": "Family Care",
+      "pillar_4": "Next-Gen",
+      "pillar_5": "Community Outreach"
+    },
+    "mission": {
+      "title": "Mission",
+      "subtitle": "We make disciples who love God and neighbor with a special focus on vulnerable children and families.",
+      "body": "We commit to a culture of humility, kindness, and faithful presence.",
+      "point_1": "Mentoring and practical support",
+      "point_2": "Consistent prayer and spiritual care",
+      "point_3": "Equipping families for long-term flourishing"
+    },
+    "history": {
+      "title": "History",
+      "subtitle": "A brief timeline of God’s faithfulness in our church family.",
+      "event_1": "2015: Good Together Church launched with a small prayer group.",
+      "event_2": "2018: Expanded to two Sunday services and neighborhood outreach.",
+      "event_3": "2023: Opened community care partnerships for families in need.",
+      "event_4": "2026: Entered a year-long focus on prayer and discipleship."
+    },
+    "services": {
+      "title": "Services",
+      "subtitle": "Join us for worship and prayer gatherings throughout the week.",
+      "s1_title": "1st Worship",
+      "s1_time": "Sunday 9:00 AM",
+      "s2_title": "2nd Worship",
+      "s2_time": "Sunday 11:00 AM",
+      "wed_title": "Wednesday Prayer",
+      "wed_time": "Wednesday 7:30 PM",
+      "sat_title": "Saturday Prayer",
+      "sat_time": "Saturday 6:30 AM",
+      "details": "Details"
+    },
+    "service_details": {
+      "w1_title": "1st Worship",
+      "w1_body": "Sunday at 9:00 AM. A welcoming service for the whole family.",
+      "w1_note": "Expect worship, prayer, and a teaching message. Children’s ministry is available.",
+      "w2_title": "2nd Worship",
+      "w2_body": "Sunday at 11:00 AM. A mid-morning gathering with extended worship.",
+      "w2_note": "Join us for worship, Scripture, and community prayer.",
+      "wed_title": "Wednesday Prayer",
+      "wed_body": "Wednesday at 7:30 PM. Weekly prayer and encouragement.",
+      "wed_note": "We gather to pray for our church, city, and one another.",
+      "sat_title": "Saturday Prayer",
+      "sat_body": "Saturday at 6:30 AM. Start the weekend in prayer.",
+      "sat_note": "Join us for early morning prayer and a short devotional."
+    },
+    "news": {
+      "title": "News",
+      "subtitle": "Stories and announcements from our community.",
+      "empty": "No published news posts yet.",
+      "error": "Unable to load news right now.",
+      "not_found": "Post not found.",
+      "back": "Back to News",
+      "load_error": "Unable to load this post.",
+      "loading": "Loading news…"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Long-form reflections, stories, and teaching notes.",
+      "empty": "No published blog posts yet.",
+      "error": "Unable to load blog right now.",
+      "not_found": "Post not found.",
+      "back": "Back to Blog",
+      "load_error": "Unable to load this post.",
+      "loading": "Loading blog…"
+    },
+    "gallery": {
+      "title": "Gallery",
+      "subtitle": "Albums from worship, outreach, and community life.",
+      "empty": "No published albums yet.",
+      "error": "Unable to load gallery right now.",
+      "not_found": "Album not found.",
+      "back": "Back to Gallery",
+      "load_error": "Unable to load this album.",
+      "loading": "Loading gallery…"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "We would love to hear from you.",
+      "info_title": "Contact Info",
+      "address": "Address: 1234 Goodmind St., Together, CA 123456",
+      "email": "Email: pilgrimbird@gmail.com",
+      "pastor": "Pastor: Rev. Junsoo So",
+      "thanks_title": "Thank You",
+      "thanks_body": "Your message has been received."
+    },
+    "offering": {
+      "title": "Offering",
+      "subtitle": "Your generosity helps us serve our city and support vulnerable families.",
+      "give_title": "Give Online",
+      "give_body": "Select an offering option below. You will be redirected to Stripe.",
+      "links_empty": "Offering links coming soon.",
+      "links_error": "Offering links are unavailable right now.",
+      "prayer_title": "Prayer for You",
+      "thanks_title": "Thank You",
+      "thanks_body": "We received your offering or prayer request."
+    },
+    "legal": {
+      "privacy_title": "Privacy Policy",
+      "privacy_body": "We only collect information submitted through our forms and use it for pastoral care and communication. We do not sell your information.",
+      "terms_title": "Terms of Use",
+      "terms_body": "Content is provided for church communication and may change without notice."
+    },
+    "not_found": {
+      "title": "Page Not Found",
+      "body": "We could not find the page you were looking for."
+    },
+    "pagination": {
+      "prev": "Prev",
+      "next": "Next"
+    }
+  }
+}

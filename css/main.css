@@ -359,14 +359,6 @@ footer {
 
 .news-card__excerpt {
   margin: 0;
-}
-
-.news-card__title {
-  margin: 0;
-}
-
-.news-card__excerpt {
-  margin: 0;
   color: var(--color-muted);
 }
 

@@ -15,17 +15,20 @@
 
   const renderList = async () => {
     const listEl = document.querySelector("#gallery-list");
-    const { manifest, lang = "en", basePath = "/en/gallery/", albumPath = "/en/gallery/album/" } =
-      document.body?.dataset || {};
-    const locale = lang === "en" ? "en-US" : lang;
-    if (!listEl || !manifest) return;
+    const lang = window.Site?.lang || "en";
+    const locale = window.Site?.locale || "en-US";
+    const manifest = `/content/gallery/${lang}/index.json`;
+    const basePath = `/${lang}/gallery/`;
+    const albumPath = `/${lang}/gallery/album/`;
+    const t = window.Site?.t || ((key) => key);
+    if (!listEl) return;
 
     try {
       const albums = await window.ContentLoader.getGallery(manifest, lang);
       listEl.innerHTML = "";
 
       if (!albums.length) {
-        listEl.innerHTML = "<p>No published albums yet.</p>";
+        listEl.innerHTML = `<p>${t("gallery.empty")}</p>`;
         return;
       }
 
@@ -59,7 +62,7 @@
         action.className = "news-card__action";
         const link = document.createElement("a");
         link.href = `${albumPath}?slug=${encodeURIComponent(album.slug)}`;
-        link.textContent = "View Album";
+        link.textContent = t("actions.view_album");
         action.appendChild(link);
 
         body.appendChild(title);
@@ -72,7 +75,7 @@
         listEl.appendChild(card);
       });
     } catch (error) {
-      listEl.innerHTML = "<p>Unable to load gallery right now.</p>";
+      listEl.innerHTML = `<p>${t("gallery.error")}</p>`;
     }
   };
 
@@ -105,9 +108,12 @@
     const container = document.querySelector("#gallery-album");
     const imagesEl = document.querySelector("#gallery-images");
     const paginationEl = document.querySelector("#gallery-pagination");
-    const { manifest, lang = "en", basePath = "/en/gallery/" } = document.body?.dataset || {};
-    const locale = lang === "en" ? "en-US" : lang;
-    if (!container || !imagesEl || !paginationEl || !manifest) return;
+    const lang = window.Site?.lang || "en";
+    const locale = window.Site?.locale || "en-US";
+    const manifest = `/content/gallery/${lang}/index.json`;
+    const basePath = `/${lang}/gallery/`;
+    const t = window.Site?.t || ((key) => key);
+    if (!container || !imagesEl || !paginationEl) return;
 
     try {
       const albums = await window.ContentLoader.getGallery(manifest, lang);
@@ -115,7 +121,9 @@
       const album = albums.find((item) => item.slug === slug);
 
       if (!album) {
-        container.innerHTML = `<p>Album not found. <a href="${basePath}">Back to Gallery</a></p>`;
+        container.innerHTML = `<p>${t("gallery.not_found")} <a href="${basePath}">${t(
+          "gallery.back"
+        )}</a></p>`;
         imagesEl.innerHTML = "";
         paginationEl.innerHTML = "";
         return;
@@ -159,7 +167,7 @@
       const queryString = `slug=${encodeURIComponent(album.slug)}`;
       window.Pagination.render(paginationEl, currentPage, totalPages, basePath + "album/", queryString);
     } catch (error) {
-      container.innerHTML = "<p>Unable to load this album.</p>";
+      container.innerHTML = `<p>${t("gallery.load_error")}</p>`;
     }
   };
 

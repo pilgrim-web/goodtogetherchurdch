@@ -27,3 +27,6 @@ Use the following public paths:
 - `/assets/img/pastor/pastor-portrait.jpg`
 - `/assets/img/staffs/staff-01.jpg` (and more as needed)
 - `/assets/img/gallery/<album>/` for gallery images
+
+## Multilingual Routing
+The site uses a single set of templates (no per-language HTML files). Language prefixes in the URL (e.g., `/en/`, `/es/`) are handled by Netlify rewrites. JavaScript detects the language from the URL prefix, applies translations from `content/i18n.json`, and updates internal links to keep the prefix.
