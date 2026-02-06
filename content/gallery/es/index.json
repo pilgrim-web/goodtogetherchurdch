@@ -1,6 +1,7 @@
 {
   "albums": [
     {
+      "id": "hope-day",
       "title": "Día de Esperanza",
       "date": "2025-10-02",
       "lang": "es",

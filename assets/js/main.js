@@ -1,5 +1,7 @@
 (() => {
   const supportedLangs = ["en", "es", "ko", "ja"];
+  const localeMap = { en: "en-US", es: "es-ES", ko: "ko-KR", ja: "ja-JP" };
+  const manifestCache = new Map();
 
   const getPathParts = () => window.location.pathname.split("/").filter(Boolean);
 
@@ -20,6 +22,35 @@
     const query = window.location.search || "";
     const hash = window.location.hash || "";
     window.location.replace(`/en${path}${query}${hash}`);
+  };
+
+  const loadManifest = async (collection, lang) => {
+    const cacheKey = `${collection}:${lang}`;
+    if (manifestCache.has(cacheKey)) {
+      return manifestCache.get(cacheKey);
+    }
+
+    const url = `/content/${collection}/${lang}/index.json`;
+    const promise = fetch(url, { cache: "no-cache" })
+      .then((response) => (response.ok ? response.json() : null))
+      .catch(() => null);
+
+    manifestCache.set(cacheKey, promise);
+    return promise;
+  };
+
+  const getDetailContext = () => {
+    const page = document.body?.dataset?.page || "";
+    if (page === "news-detail") return { collection: "news", listPath: "news" };
+    if (page === "blog-detail") return { collection: "blog", listPath: "blog" };
+    if (page === "gallery-detail") return { collection: "gallery", listPath: "gallery" };
+    return null;
+  };
+
+  const getPublishedItems = (manifest, collection, lang) => {
+    const items = collection === "gallery" ? manifest?.albums : manifest?.posts;
+    if (!Array.isArray(items)) return [];
+    return items.filter((item) => item && item.status === "published" && item.lang === lang);
   };
 
   const setupLangMenu = (lang) => {
@@ -62,11 +93,49 @@
 
     const currentPath = getPathParts().slice(1).join("/");
     const trailingSlash = window.location.pathname.endsWith("/") ? "/" : "";
-    document.querySelectorAll("[data-lang-switch]").forEach((link) => {
+    const suffix = currentPath ? `/${currentPath}${trailingSlash}` : "/";
+    const switchLinks = Array.from(document.querySelectorAll("[data-lang-switch]"));
+
+    switchLinks.forEach((link) => {
       const targetLang = link.getAttribute("data-lang-switch");
-      const suffix = currentPath ? `/${currentPath}${trailingSlash}` : "/";
       link.setAttribute("href", `/${targetLang}${suffix}${window.location.search}`);
     });
+
+    const detail = getDetailContext();
+    if (!detail) return;
+
+    const url = new URL(window.location.href);
+    const currentSlug = url.searchParams.get("slug");
+    if (!currentSlug) return;
+
+    (async () => {
+      const currentManifest = await loadManifest(detail.collection, lang);
+      const currentItems = getPublishedItems(currentManifest, detail.collection, lang);
+      const currentItem = currentItems.find((item) => item.slug === currentSlug);
+      const contentId = currentItem?.id || null;
+
+      await Promise.all(
+        switchLinks.map(async (link) => {
+          const targetLang = link.getAttribute("data-lang-switch");
+          if (!targetLang || targetLang === lang) return;
+
+          const targetManifest = await loadManifest(detail.collection, targetLang);
+          const targetItems = getPublishedItems(targetManifest, detail.collection, targetLang);
+          const targetItem = contentId
+            ? targetItems.find((item) => item.id === contentId)
+            : targetItems.find((item) => item.slug === currentSlug);
+
+          if (targetItem) {
+            const params = new URLSearchParams(url.search);
+            params.set("slug", targetItem.slug);
+            const query = params.toString();
+            link.setAttribute("href", `/${targetLang}${suffix}?${query}`);
+          } else {
+            link.setAttribute("href", `/${targetLang}/${detail.listPath}/`);
+          }
+        })
+      );
+    })();
   };
 
   const applyInternalLinks = (lang) => {
@@ -170,7 +239,7 @@
     }
 
     const t = (key) => getTranslation(i18n, lang, key) || key;
-    window.Site = { lang, t, locale: lang === "en" ? "en-US" : lang };
+    window.Site = { lang, t, locale: localeMap[lang] || lang };
 
     applyI18n(i18n, lang);
 

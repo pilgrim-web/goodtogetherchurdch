@@ -29,4 +29,9 @@ Use the following public paths:
 - `/assets/img/gallery/<album>/` for gallery images
 
 ## Multilingual Routing
-The site uses a single set of templates (no per-language HTML files). Language prefixes in the URL (e.g., `/en/`, `/es/`) are handled by Netlify rewrites. JavaScript detects the language from the URL prefix, applies translations from `content/i18n.json`, and updates internal links to keep the prefix.
+Canonical URLs use language prefixes (e.g., `/en/`, `/es/`, `/ko/`, `/ja/`). Pages are duplicated under those language folders so the site works on any static host (Netlify, GitHub Pages, `python -m http.server`, etc.). JavaScript detects the language from the URL prefix, applies translations from `content/i18n.json`, and updates internal links to keep the prefix.
+
+If you edit any root `*.html` page, re-sync the language-prefixed copies:
+```
+bash scripts/sync-lang-pages.sh
+```

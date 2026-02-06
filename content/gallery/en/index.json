@@ -1,6 +1,7 @@
 {
   "albums": [
     {
+      "id": "hope-day",
       "title": "Hope Day Outreach",
       "date": "2025-10-02",
       "lang": "en",
@@ -17,6 +18,7 @@
       ]
     },
     {
+      "id": "community-night",
       "title": "Community Night",
       "date": "2025-08-18",
       "lang": "en",
