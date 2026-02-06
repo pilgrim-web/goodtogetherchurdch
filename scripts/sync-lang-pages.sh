@@ -25,5 +25,4 @@ for lang in "${langs[@]}"; do
   done
 done
 
-python scripts/normalize-html-asset-paths.py
 echo "Synced language-prefixed pages: ${langs[*]}"

@@ -1,4 +1,5 @@
 ---
+id: "2025-12-prayer"
 title: "Oración en Tiempos Difíciles"
 date: "2025-12-20"
 lang: "es"

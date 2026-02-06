@@ -1,4 +1,5 @@
 ---
+id: "2026-pray-together"
 title: "2026, Let's Pray Together"
 date: "2026-01-12"
 lang: "en"

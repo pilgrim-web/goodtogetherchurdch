@@ -1,285 +1,633 @@
 backend:
   name: git-gateway
   branch: main
-
 local_backend: true
-
-media_folder: "assets/img/uploads"
-public_folder: "/assets/img/uploads"
-
-settings_fields: &settings_fields
-  - { label: "Church Name", name: "church_name", widget: "string" }
-  - { label: "Pastor Name", name: "pastor_name", widget: "string" }
-  - { label: "Address Line 1", name: "address_line1", widget: "string" }
-  - { label: "Address Line 2", name: "address_line2", widget: "string" }
-  - { label: "Email", name: "email", widget: "string" }
-  - label: "Service Times"
-    name: "service_times"
-    widget: "list"
-    field: { label: "Time", name: "time", widget: "string" }
-  - label: "SNS Links"
-    name: "sns"
-    widget: "object"
-    fields:
-      - { label: "Facebook", name: "facebook", widget: "string" }
-      - { label: "Instagram", name: "instagram", widget: "string" }
-      - { label: "YouTube", name: "youtube", widget: "string" }
-  - label: "Offering Links"
-    name: "offering_links"
-    widget: "list"
-    fields:
-      - { label: "Label", name: "label", widget: "string" }
-      - { label: "URL", name: "url", widget: "string" }
-  - label: "Offering Text"
-    name: "offering_text"
-    widget: "object"
-    fields:
-      - { label: "Intro", name: "intro", widget: "text" }
-      - { label: "Note", name: "note", widget: "text" }
-
-staffs_fields: &staffs_fields
-  - label: "Staffs"
-    name: "staffs"
-    widget: "list"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Role", name: "role", widget: "string" }
-      - { label: "Email", name: "email", widget: "string" }
-      - { label: "Photo", name: "photo", widget: "image" }
-
+media_folder: assets/img/uploads
+public_folder: /assets/img/uploads
+settings_fields: &id001
+- label: Church Name
+  name: church_name
+  widget: string
+- label: Pastor Name
+  name: pastor_name
+  widget: string
+- label: Address Line 1
+  name: address_line1
+  widget: string
+- label: Address Line 2
+  name: address_line2
+  widget: string
+- label: Email
+  name: email
+  widget: string
+- label: Service Times
+  name: service_times
+  widget: list
+  field:
+    label: Time
+    name: time
+    widget: string
+- label: SNS Links
+  name: sns
+  widget: object
+  fields:
+  - label: Facebook
+    name: facebook
+    widget: string
+  - label: Instagram
+    name: instagram
+    widget: string
+  - label: YouTube
+    name: youtube
+    widget: string
+- label: Offering Links
+  name: offering_links
+  widget: list
+  fields:
+  - label: Label
+    name: label
+    widget: string
+  - label: URL
+    name: url
+    widget: string
+- label: Offering Text
+  name: offering_text
+  widget: object
+  fields:
+  - label: Intro
+    name: intro
+    widget: text
+  - label: Note
+    name: note
+    widget: text
+staffs_fields: &id002
+- label: Staffs
+  name: staffs
+  widget: list
+  fields:
+  - label: Name
+    name: name
+    widget: string
+  - label: Role
+    name: role
+    widget: string
+  - label: Email
+    name: email
+    widget: string
+  - label: Photo
+    name: photo
+    widget: image
 collections:
-  - name: "settings"
-    label: "Site Settings"
-    files:
-      - file: "settings/en.json"
-        label: "Settings (EN)"
-        name: "settings_en"
-        fields: *settings_fields
-      - file: "settings/es.json"
-        label: "Settings (ES)"
-        name: "settings_es"
-        fields: *settings_fields
-      - file: "settings/ko.json"
-        label: "Settings (KO)"
-        name: "settings_ko"
-        fields: *settings_fields
-      - file: "settings/ja.json"
-        label: "Settings (JA)"
-        name: "settings_ja"
-        fields: *settings_fields
-
-  - name: "staffs"
-    label: "Staffs"
-    files:
-      - file: "staffs/en.json"
-        label: "Staffs (EN)"
-        name: "staffs_en"
-        fields: *staffs_fields
-      - file: "staffs/es.json"
-        label: "Staffs (ES)"
-        name: "staffs_es"
-        fields: *staffs_fields
-      - file: "staffs/ko.json"
-        label: "Staffs (KO)"
-        name: "staffs_ko"
-        fields: *staffs_fields
-      - file: "staffs/ja.json"
-        label: "Staffs (JA)"
-        name: "staffs_ja"
-        fields: *staffs_fields
-
-  - name: "news_en"
-    label: "News (EN)"
-    folder: "content/news/en"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "en" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "news_es"
-    label: "News (ES)"
-    folder: "content/news/es"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "es" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "news_ko"
-    label: "News (KO)"
-    folder: "content/news/ko"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "ko" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "news_ja"
-    label: "News (JA)"
-    folder: "content/news/ja"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "ja" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "blog_en"
-    label: "Blog (EN)"
-    folder: "content/blog/en"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "en" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "blog_es"
-    label: "Blog (ES)"
-    folder: "content/blog/es"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "es" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "blog_ko"
-    label: "Blog (KO)"
-    folder: "content/blog/ko"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "ko" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "blog_ja"
-    label: "Blog (JA)"
-    folder: "content/blog/ja"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "ja" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "gallery_en"
-    label: "Gallery (EN)"
-    folder: "content/gallery/en"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "en" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Description", name: "description", widget: "text" }
-      - label: "Images"
-        name: "images"
-        widget: "list"
-        field: { label: "Image", name: "image", widget: "image" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "gallery_es"
-    label: "Gallery (ES)"
-    folder: "content/gallery/es"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "es" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Description", name: "description", widget: "text" }
-      - label: "Images"
-        name: "images"
-        widget: "list"
-        field: { label: "Image", name: "image", widget: "image" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "gallery_ko"
-    label: "Gallery (KO)"
-    folder: "content/gallery/ko"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "ko" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Description", name: "description", widget: "text" }
-      - label: "Images"
-        name: "images"
-        widget: "list"
-        field: { label: "Image", name: "image", widget: "image" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "gallery_ja"
-    label: "Gallery (JA)"
-    folder: "content/gallery/ja"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Lang", name: "lang", widget: "hidden", default: "ja" }
-      - { label: "Cover Image", name: "cover_image", widget: "image" }
-      - { label: "Description", name: "description", widget: "text" }
-      - label: "Images"
-        name: "images"
-        widget: "list"
-        field: { label: "Image", name: "image", widget: "image" }
-      - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+- name: settings
+  label: Site Settings
+  files:
+  - file: settings/en.json
+    label: Settings (EN)
+    name: settings_en
+    fields: *id001
+  - file: settings/es.json
+    label: Settings (ES)
+    name: settings_es
+    fields: *id001
+  - file: settings/ko.json
+    label: Settings (KO)
+    name: settings_ko
+    fields: *id001
+  - file: settings/ja.json
+    label: Settings (JA)
+    name: settings_ja
+    fields: *id001
+- name: staffs
+  label: Staffs
+  files:
+  - file: staffs/en.json
+    label: Staffs (EN)
+    name: staffs_en
+    fields: *id002
+  - file: staffs/es.json
+    label: Staffs (ES)
+    name: staffs_es
+    fields: *id002
+  - file: staffs/ko.json
+    label: Staffs (KO)
+    name: staffs_ko
+    fields: *id002
+  - file: staffs/ja.json
+    label: Staffs (JA)
+    name: staffs_ja
+    fields: *id002
+- name: news_en
+  label: News (EN)
+  folder: content/news/en
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - &id003
+    label: Content ID
+    name: id
+    widget: string
+    hint: 'Same across EN/ES/KO/JA translations. Example: 2026-pray-week-1'
+    pattern:
+    - ^[a-z0-9-]+$
+    - Use lowercase letters, numbers, and hyphens only.
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: en
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Excerpt
+    name: excerpt
+    widget: text
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug
+- name: news_es
+  label: News (ES)
+  folder: content/news/es
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - *id003
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: es
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Excerpt
+    name: excerpt
+    widget: text
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug
+- name: news_ko
+  label: News (KO)
+  folder: content/news/ko
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - *id003
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: ko
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Excerpt
+    name: excerpt
+    widget: text
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug
+- name: news_ja
+  label: News (JA)
+  folder: content/news/ja
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - *id003
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: ja
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Excerpt
+    name: excerpt
+    widget: text
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug
+- name: blog_en
+  label: Blog (EN)
+  folder: content/blog/en
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - *id003
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: en
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Excerpt
+    name: excerpt
+    widget: text
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug
+- name: blog_es
+  label: Blog (ES)
+  folder: content/blog/es
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - *id003
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: es
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Excerpt
+    name: excerpt
+    widget: text
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug
+- name: blog_ko
+  label: Blog (KO)
+  folder: content/blog/ko
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - *id003
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: ko
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Excerpt
+    name: excerpt
+    widget: text
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug
+- name: blog_ja
+  label: Blog (JA)
+  folder: content/blog/ja
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - *id003
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: ja
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Excerpt
+    name: excerpt
+    widget: text
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug
+- name: gallery_en
+  label: Gallery (EN)
+  folder: content/gallery/en
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - *id003
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: en
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Description
+    name: description
+    widget: text
+  - label: Images
+    name: images
+    widget: list
+    field:
+      label: Image
+      name: image
+      widget: image
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug
+- name: gallery_es
+  label: Gallery (ES)
+  folder: content/gallery/es
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - *id003
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: es
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Description
+    name: description
+    widget: text
+  - label: Images
+    name: images
+    widget: list
+    field:
+      label: Image
+      name: image
+      widget: image
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug
+- name: gallery_ko
+  label: Gallery (KO)
+  folder: content/gallery/ko
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - *id003
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: ko
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Description
+    name: description
+    widget: text
+  - label: Images
+    name: images
+    widget: list
+    field:
+      label: Image
+      name: image
+      widget: image
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug
+- name: gallery_ja
+  label: Gallery (JA)
+  folder: content/gallery/ja
+  create: true
+  slug: '{{slug}}'
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - *id003
+  - label: Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - label: Lang
+    name: lang
+    widget: hidden
+    default: ja
+  - label: Cover Image
+    name: cover_image
+    widget: image
+  - label: Description
+    name: description
+    widget: text
+  - label: Images
+    name: images
+    widget: list
+    field:
+      label: Image
+      name: image
+      widget: image
+  - label: Status
+    name: status
+    widget: select
+    options:
+    - draft
+    - published
+    default: draft
+  - label: Slug
+    name: slug
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
+  identifier_field: slug

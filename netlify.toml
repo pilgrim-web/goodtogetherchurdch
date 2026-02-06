@@ -1,7 +1,27 @@
+[build]
+  publish = "."
+  command = "npm run build"
+
 [[redirects]]
   from = "/"
   to = "/en/"
   status = 301
+
+# Avoid stale content during language switches / content updates
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+
+# Admin UI: allow Decap CMS (unpkg) and Netlify Identity scripts.
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' https://unpkg.com https://identity.netlify.com; connect-src 'self' https://api.netlify.com https://identity.netlify.com http://localhost:8081;"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
 [[headers]]
   for = "/*"
@@ -10,4 +30,4 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self' https://.stripe.com; frame-src https://.stripe.com https://www.youtube-nocookie.com https://www.youtube.com"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self' https://*.stripe.com https://donate.stripe.com; frame-src https://*.stripe.com https://donate.stripe.com https://www.youtube-nocookie.com https://www.youtube.com"

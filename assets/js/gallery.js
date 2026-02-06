@@ -3,20 +3,6 @@
 
   const safeText = (value) => (value ? String(value) : "");
 
-  const getBasePath = () => window.Site?.basePath || "/";
-
-  const withBasePath = (path) => `${getBasePath()}${String(path || "").replace(/^\\//, "")}`;
-
-  const withBaseAsset = (value) => {
-    if (!value) return "";
-    const text = String(value);
-    if (/^(https?:)?\\/\\//i.test(text) || text.startsWith("data:") || text.startsWith("mailto:")) {
-      return text;
-    }
-    if (text.startsWith("/")) return withBasePath(text.slice(1));
-    return withBasePath(text);
-  };
-
   const formatDate = (value, locale) => {
     const date = window.ContentLoader?.parseDate?.(value);
     if (!date) return value;
@@ -31,9 +17,9 @@
     const listEl = document.querySelector("#gallery-list");
     const lang = window.Site?.lang || "en";
     const locale = window.Site?.locale || "en-US";
-    const manifest = withBasePath(`content/gallery/${lang}/index.json`);
-    const basePath = withBasePath(`${lang}/gallery/`);
-    const albumPath = withBasePath(`${lang}/gallery/album/`);
+    const manifest = `/content/gallery/${lang}/index.json`;
+    const basePath = `/${lang}/gallery/`;
+    const albumPath = `/${lang}/gallery/album/`;
     const t = window.Site?.t || ((key) => key);
     if (!listEl) return;
 
@@ -52,7 +38,7 @@
 
         const image = document.createElement("img");
         image.className = "news-card__image";
-        image.src = withBaseAsset(album.cover_image);
+        image.src = safeText(album.cover_image);
         image.alt = safeText(album.title);
         image.loading = "lazy";
         image.decoding = "async";
@@ -124,8 +110,8 @@
     const paginationEl = document.querySelector("#gallery-pagination");
     const lang = window.Site?.lang || "en";
     const locale = window.Site?.locale || "en-US";
-    const manifest = withBasePath(`content/gallery/${lang}/index.json`);
-    const basePath = withBasePath(`${lang}/gallery/`);
+    const manifest = `/content/gallery/${lang}/index.json`;
+    const basePath = `/${lang}/gallery/`;
     const t = window.Site?.t || ((key) => key);
     if (!container || !imagesEl || !paginationEl) return;
 
@@ -169,7 +155,7 @@
         const btn = document.createElement("button");
         btn.type = "button";
         const img = document.createElement("img");
-        img.src = withBaseAsset(src);
+        img.src = safeText(src);
         img.alt = safeText(album.title);
         img.loading = "lazy";
         img.decoding = "async";

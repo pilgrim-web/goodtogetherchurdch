@@ -1,4 +1,5 @@
 ---
+id: "2026-pray-together"
 title: "2026 함께 기도해요"
 date: "2026-01-12"
 lang: "ko"

@@ -1,0 +1,13 @@
+{
+  "name": "goodchurch",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:content": "node scripts/generate-content-indexes.mjs",
+    "build": "bash scripts/sync-lang-pages.sh && npm run build:content",
+    "dev:cms": "npx decap-server"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

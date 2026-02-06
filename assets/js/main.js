@@ -3,41 +3,7 @@
   const localeMap = { en: "en-US", es: "es-ES", ko: "ko-KR", ja: "ja-JP" };
   const manifestCache = new Map();
 
-  const normalizeBasePath = (value) => {
-    if (!value) return "/";
-    let output = value;
-    if (!output.startsWith("/")) output = `/${output}`;
-    if (!output.endsWith("/")) output = `${output}/`;
-    return output;
-  };
-
-  const detectBasePath = () => {
-    const marker = "/assets/js/main.js";
-    const script =
-      document.currentScript || document.querySelector("script[src$=\"assets/js/main.js\"]");
-    const src = script?.src || "";
-    try {
-      const url = new URL(src, window.location.href);
-      const idx = url.pathname.lastIndexOf(marker);
-      if (idx === -1) return "/";
-      return normalizeBasePath(url.pathname.slice(0, idx));
-    } catch {
-      return "/";
-    }
-  };
-
-  const basePath = detectBasePath();
-  const withBasePath = (path) => `${basePath}${String(path || "").replace(/^\\//, "")}`;
-
-  const getPathFromBase = () => {
-    if (basePath === "/") return window.location.pathname || "/";
-    const pathname = window.location.pathname || "/";
-    if (pathname === basePath.slice(0, -1)) return "/";
-    if (pathname.startsWith(basePath)) return pathname.slice(basePath.length - 1) || "/";
-    return pathname;
-  };
-
-  const getPathParts = () => getPathFromBase().split("/").filter(Boolean);
+  const getPathParts = () => window.location.pathname.split("/").filter(Boolean);
 
   const detectLang = () => {
     const [first] = getPathParts();
@@ -50,10 +16,12 @@
     const bypass = ["admin", "assets", "content", "settings", "staffs", "css", "js"];
     if (supportedLangs.includes(first) || bypass.includes(first)) return;
 
-    const path = getPathFromBase();
+    const path = window.location.pathname.startsWith("/")
+      ? window.location.pathname
+      : `/${window.location.pathname}`;
     const query = window.location.search || "";
     const hash = window.location.hash || "";
-    window.location.replace(withBasePath(`en${path}${query}${hash}`));
+    window.location.replace(`/en${path}${query}${hash}`);
   };
 
   const loadManifest = async (collection, lang) => {
@@ -62,7 +30,7 @@
       return manifestCache.get(cacheKey);
     }
 
-    const url = withBasePath(`content/${collection}/${lang}/index.json`);
+    const url = `/content/${collection}/${lang}/index.json`;
     const promise = fetch(url, { cache: "no-cache" })
       .then((response) => (response.ok ? response.json() : null))
       .catch(() => null);
@@ -124,13 +92,13 @@
     }
 
     const currentPath = getPathParts().slice(1).join("/");
-    const trailingSlash = getPathFromBase().endsWith("/") ? "/" : "";
+    const trailingSlash = window.location.pathname.endsWith("/") ? "/" : "";
     const suffix = currentPath ? `/${currentPath}${trailingSlash}` : "/";
     const switchLinks = Array.from(document.querySelectorAll("[data-lang-switch]"));
 
     switchLinks.forEach((link) => {
       const targetLang = link.getAttribute("data-lang-switch");
-      link.setAttribute("href", withBasePath(`${targetLang}${suffix}${window.location.search}`));
+      link.setAttribute("href", `/${targetLang}${suffix}${window.location.search}`);
     });
 
     const detail = getDetailContext();
@@ -161,9 +129,9 @@
             const params = new URLSearchParams(url.search);
             params.set("slug", targetItem.slug);
             const query = params.toString();
-            link.setAttribute("href", withBasePath(`${targetLang}${suffix}?${query}`));
+            link.setAttribute("href", `/${targetLang}${suffix}?${query}`);
           } else {
-            link.setAttribute("href", withBasePath(`${targetLang}/${detail.listPath}/`));
+            link.setAttribute("href", `/${targetLang}/${detail.listPath}/`);
           }
         })
       );
@@ -174,19 +142,19 @@
     document.querySelectorAll("[data-link]").forEach((link) => {
       const target = link.getAttribute("data-link");
       const path = target === "home" ? "" : `/${target}`;
-      link.setAttribute("href", withBasePath(`${lang}${path}/`));
+      link.setAttribute("href", `/${lang}${path}/`);
     });
   };
 
   const applyFormActions = (lang) => {
     document.querySelectorAll("[data-form-action]").forEach((form) => {
       const target = form.getAttribute("data-form-action");
-      form.setAttribute("action", withBasePath(`${lang}/${target}/`));
+      form.setAttribute("action", `/${lang}/${target}/`);
     });
   };
 
   const loadSettings = async (lang) => {
-    const response = await fetch(withBasePath(`settings/${lang}.json`), { cache: "no-cache" });
+    const response = await fetch(`/settings/${lang}.json`, { cache: "no-cache" });
     if (!response.ok) throw new Error("Failed to load settings");
     return response.json();
   };
@@ -220,7 +188,7 @@
   };
 
   const loadI18n = async () => {
-    const response = await fetch(withBasePath("content/i18n.json"), { cache: "no-cache" });
+    const response = await fetch("/content/i18n.json", { cache: "no-cache" });
     if (!response.ok) throw new Error("Failed to load i18n");
     return response.json();
   };
@@ -271,7 +239,7 @@
     }
 
     const t = (key) => getTranslation(i18n, lang, key) || key;
-    window.Site = { lang, t, locale: localeMap[lang] || lang, basePath };
+    window.Site = { lang, t, locale: localeMap[lang] || lang };
 
     applyI18n(i18n, lang);
 
