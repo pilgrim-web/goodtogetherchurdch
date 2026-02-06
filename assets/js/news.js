@@ -3,6 +3,20 @@
 
   const safeText = (value) => (value ? String(value) : "");
 
+  const getBasePath = () => window.Site?.basePath || "/";
+
+  const withBasePath = (path) => `${getBasePath()}${String(path || "").replace(/^\\//, "")}`;
+
+  const withBaseAsset = (value) => {
+    if (!value) return "";
+    const text = String(value);
+    if (/^(https?:)?\\/\\//i.test(text) || text.startsWith("data:") || text.startsWith("mailto:")) {
+      return text;
+    }
+    if (text.startsWith("/")) return withBasePath(text.slice(1));
+    return withBasePath(text);
+  };
+
   const formatDate = (value, locale) => {
     const date = window.ContentLoader?.parseDate?.(value);
     if (!date) return value;
@@ -18,9 +32,9 @@
     const paginationEl = document.querySelector("#news-pagination");
     const lang = window.Site?.lang || "en";
     const locale = window.Site?.locale || "en-US";
-    const manifest = `/content/news/${lang}/index.json`;
-    const basePath = `/${lang}/news/`;
-    const postPath = `/${lang}/news/post/`;
+    const manifest = withBasePath(`content/news/${lang}/index.json`);
+    const basePath = withBasePath(`${lang}/news/`);
+    const postPath = withBasePath(`${lang}/news/post/`);
     const t = window.Site?.t || ((key) => key);
     if (!listEl || !paginationEl) return;
 
@@ -45,7 +59,7 @@
 
           const image = document.createElement("img");
           image.className = "news-card__image";
-          image.src = safeText(post.cover_image);
+          image.src = withBaseAsset(post.cover_image);
           image.alt = safeText(post.title);
           image.loading = "lazy";
           image.decoding = "async";
@@ -179,8 +193,8 @@
     const container = document.querySelector("#news-post");
     const lang = window.Site?.lang || "en";
     const locale = window.Site?.locale || "en-US";
-    const manifest = `/content/news/${lang}/index.json`;
-    const basePath = `/${lang}/news/`;
+    const manifest = withBasePath(`content/news/${lang}/index.json`);
+    const basePath = withBasePath(`${lang}/news/`);
     const t = window.Site?.t || ((key) => key);
     if (!container) return;
 
@@ -202,7 +216,7 @@
       const imageWrap = document.createElement("div");
       imageWrap.className = "news-post__image";
       const image = document.createElement("img");
-      image.src = safeText(post.cover_image);
+      image.src = withBaseAsset(post.cover_image);
       image.alt = safeText(post.title);
       image.loading = "lazy";
       image.decoding = "async";
